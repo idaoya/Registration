@@ -3,7 +3,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <title>List Employees</title>
 <meta charset="UTF-8" />
@@ -20,18 +21,19 @@
 <body>
 	<h1>List Employees</h1>
 	<table>
+		<caption>Show All Employee</caption>
 		<thead>
 			<tr>
-				<th>NAME</th>
-				<th>Joining Date</th>
-				<th>Salary</th>
-				<th>Employee code</th>
-				<th></th>
+			    <td>NAME</td>
+				<th scope="col">Joining Date</th>
+				<th scope="col">Salary</th>
+				<th scope="col">Employee code</th>
+				<th scope="col"></th>
 			</tr>
 		</thead>
 		<c:forEach items="${employees}" var="employee">
 			<tr>
-				<th>${employee.name}</th>
+				<td>${employee.name}</td>
 				<td>${employee.joiningDate}</td>
 				<td>${employee.salary}</td>
 				<td><a

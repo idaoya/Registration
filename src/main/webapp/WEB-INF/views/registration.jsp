@@ -3,7 +3,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <title>Add New Customer</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -19,16 +20,16 @@
 	<form:form method="POST" modelAttribute="employee">
 		<form:input type="hidden" path="id" id="id" />
 		<table>
+			<caption>Registration Form</caption>
 			<tr>
-				<td><label for="name">Name: </label></td>
-				<td><form:input path="name" id="name" maxLength="30" /></td>
-				<td><form:errors path="name" cssClass="error" /></td>
+				<th scope="col"><label for="name">Name: </label></th>
+				<th scope="col"><form:input path="name" id="name" maxLength="30" /></th> 
+				<th scope="col"><form:errors path="name" cssClass="error" /></th>
 			</tr>
 
 			<tr>
 				<td><label for="joiningDate">Joining Date: </label></td>
-				<td><form:input path="joiningDate" id="joiningDate"
-						maxLength="10" /></td>
+				<td><form:input path="joiningDate" id="joiningDate" maxLength="10" /></td>
 				<td><form:errors path="joiningDate" cssClass="error" /></td>
 			</tr>
 
